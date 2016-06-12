@@ -23,6 +23,10 @@ app.get('/', function (req, res) {
   res.status(200).send('Hello, bachi!');
 });
 
+app.get('/process', function (req, res) {
+  res.json(process.env);
+});
+
 // Start the server
 var server = app.listen(process.env.PORT || '8080', function () {
   console.log('App listening on port %s', server.address().port);
